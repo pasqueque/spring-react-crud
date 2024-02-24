@@ -1,10 +1,10 @@
 pipeline {
-    agent { dockerfile true }
-    /*agent {
+    //agent { dockerfile true }
+    agent {
         docker {
-            image 'openjdk:17-slim'
+            image 'eclipse-temurin:17.0.10_7-jdk-alpine'
         }
-    }*/
+    }
     stages {
         /*stage('Check out') {
             steps {
