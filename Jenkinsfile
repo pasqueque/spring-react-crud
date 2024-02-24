@@ -2,7 +2,7 @@ pipeline {
     //agent { dockerfile true }
     agent {
         docker {
-            image 'openjdk:17-slim'
+            image 'alpine-jdk17'
         }
     }
     stages {
