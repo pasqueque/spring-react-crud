@@ -93,7 +93,16 @@
 						</goals>
 						<configuration>
 							<nodeVersion>v18.14.2</nodeVersion>
-							<!--<npmVersion>9.5.0</npmVersion>-->
+							<npmVersion>9.5.0</npmVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm remove</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>remove node_modules</arguments>
 						</configuration>
 					</execution>
 					<execution>
