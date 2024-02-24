@@ -2,7 +2,7 @@ pipeline {
     //agent { dockerfile true }
     agent {
         docker {
-            image 'open-17.0.10_7-jre-jammy'
+            image 'open-17-jdk'
         }
     }
     stages {
