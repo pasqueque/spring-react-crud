@@ -2,7 +2,7 @@ pipeline {
     //agent { dockerfile true }
     agent {
         docker {
-            image 'open-17-jdk'
+            image 'ibm-semeru-runtimes:open-17-jdk'
         }
     }
     stages {
