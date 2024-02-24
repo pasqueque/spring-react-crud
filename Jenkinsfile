@@ -1,5 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    //agent { dockerfile true }
+    agent {
+        docker {
+            image 'maven:3.8.4-openjdk-17-slim'
+        }
+    }
     stages {
         /*stage('Check out') {
             steps {
@@ -10,8 +15,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'npm --version'
-                    sh 'node --version'
+                    //sh 'npm --version'
+                    //sh 'node --version'
                     sh './mvnw compile'
                 }
             }
