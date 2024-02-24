@@ -1,0 +1,32 @@
+pipeline {
+    agent { dockerfile true }
+    stages {
+        /*stage('Check out') {
+            steps {
+                git branch: 'master', changelog: false, poll: false, url: env.GITHUB_URL
+            }
+        }*/
+        // Остальная часть остается без изменений
+        stage('Build') {
+            steps {
+                script {
+                    sh './mvnw compile'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    sh './mvnw test'
+                }
+            }
+        }
+        stage('Package') {
+            steps {
+                script {
+                    sh './mvnw package -Dmaven.test.skip'
+                }
+            }
+        }
+    }
+}
