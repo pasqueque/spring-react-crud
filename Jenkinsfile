@@ -1,10 +1,10 @@
 pipeline {
-    //agent { dockerfile true }
-    agent {
+    agent { dockerfile true }
+    /*agent {
         docker {
             image 'openjdk:17-slim'
         }
-    }
+    }*/
     stages {
         /*stage('Check out') {
             steps {
