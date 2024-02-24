@@ -2,7 +2,7 @@ pipeline {
     //agent { dockerfile true }
     agent {
         docker {
-            image 'maven:3.8.4-openjdk-17-slim'
+            image 'openjdk:17-slim'
         }
     }
     stages {
