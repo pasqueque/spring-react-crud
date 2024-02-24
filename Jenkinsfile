@@ -10,6 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    sh 'npm --version'
+                    sh 'node --version'
                     sh './mvnw compile'
                 }
             }
